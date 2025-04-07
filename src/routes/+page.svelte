@@ -1,12 +1,11 @@
-<div class="container">
+<div class="centered">
   <img src="/images/dan-barker.jpg" alt="Dan Barker" />
 </div>
 
 <style>
-  .container {
+  .centered {
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
   }
 </style>
