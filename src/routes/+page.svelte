@@ -172,27 +172,50 @@
 						{/each}
 					</div>
 					<div class="flex justify-between items-center pt-4">
-						<a
-							href="https://github.com/daniel-barker/slowinski"
-							class="text-[#FF6B6B] hover:text-[#FF5555] font-semibold flex items-center gap-2"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							View Code
-							<svg
-								class="w-4 h-4"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
+						<div class="flex gap-4">
+							<a
+								href="https://slowinskiservices.com/"
+								class="text-[#FF6B6B] hover:text-[#FF5555] font-semibold flex items-center gap-2"
+								target="_blank"
+								rel="noopener noreferrer"
 							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-								/>
-							</svg>
-						</a>
+								View Site
+								<svg
+									class="w-4 h-4"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+									/>
+								</svg>
+							</a>
+							<a
+								href="https://github.com/daniel-barker/slowinski"
+								class="text-[#FF6B6B] hover:text-[#FF5555] font-semibold flex items-center gap-2"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								View Code
+								<svg
+									class="w-4 h-4"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+									/>
+								</svg>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -221,27 +244,50 @@
 						{/each}
 					</div>
 					<div class="flex justify-between items-center pt-4">
-						<a
-							href="https://github.com/chriszmx/turan-tattoos"
-							class="text-[#FF6B6B] hover:text-[#FF5555] font-semibold flex items-center gap-2"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							View Code
-							<svg
-								class="w-4 h-4"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
+						<div class="flex gap-4">
+							<a
+								href="https://www.turantattoo.com/"
+								class="text-[#FF6B6B] hover:text-[#FF5555] font-semibold flex items-center gap-2"
+								target="_blank"
+								rel="noopener noreferrer"
 							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-								/>
-							</svg>
-						</a>
+								View Site
+								<svg
+									class="w-4 h-4"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+									/>
+								</svg>
+							</a>
+							<a
+								href="https://github.com/chriszmx/turan-tattoos"
+								class="text-[#FF6B6B] hover:text-[#FF5555] font-semibold flex items-center gap-2"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								View Code
+								<svg
+									class="w-4 h-4"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+									/>
+								</svg>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
