@@ -9,7 +9,7 @@
       Hey, I'm Dan 👋
     </h1>
     <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-2xl mb-12">
-      I'm a versatile individual who loves creating, fixing, and helping. Whether it's crafting code, maintaining vehicles, or taking care of pets - I put my heart into everything I do.
+      I'm a versatile individual who loves creating, fixing, and helping. Whether it's crafting code, maintaining vehicles, or taking care of pets - I take pride in doing things well and learning something new along the way.
     </p>
     <div class="flex gap-4">
       <a href="#services" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
