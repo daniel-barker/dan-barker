@@ -26,7 +26,7 @@
     <!-- Services Card -->
     <a href="/services" class="group p-6 bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all">
       <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-        Services & Life
+        What I Do
       </h2>
       <p class="text-slate-600 dark:text-slate-300">
         From practical services to daily adventures - discover how I can help and what keeps me busy.
@@ -36,7 +36,7 @@
     <!-- Projects Card -->
     <a href="/projects" class="group p-6 bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all">
       <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-        Tech Journey
+        My Tech Journey
       </h2>
       <p class="text-slate-600 dark:text-slate-300">
         Explore my development projects and dive into the technologies I work with.
@@ -46,7 +46,7 @@
     <!-- About/Contact Card -->
     <a href="/about" class="group p-6 bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all">
       <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-        About & Contact
+        Who I Am
       </h2>
       <p class="text-slate-600 dark:text-slate-300">
         Learn more about who I am and let's start a conversation.
