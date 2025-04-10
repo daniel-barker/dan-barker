@@ -26,30 +26,30 @@
     <!-- Services Card -->
     <a href="/services" class="group p-6 bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all">
       <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-        What I Do
+        How I Help
       </h2>
       <p class="text-slate-600 dark:text-slate-300">
-        From practical services to daily adventures - discover how I can help and what keeps me busy.
+        A mix of practical skills, creative projects, and everyday things I enjoy doing for others.
       </p>
     </a>
 
     <!-- Projects Card -->
     <a href="/projects" class="group p-6 bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all">
       <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-        My Tech Journey
+        My Path in Tech
       </h2>
       <p class="text-slate-600 dark:text-slate-300">
-        Explore my development projects and dive into the technologies I work with.
+        A look at how I got into development, what I’ve built, and where I'm going with it.
       </p>
     </a>
 
     <!-- About/Contact Card -->
-    <a href="/about" class="group p-6 bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all">
+    <a href="/me" class="group p-6 bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all">
       <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-        Who I Am
+        Meet Me
       </h2>
       <p class="text-slate-600 dark:text-slate-300">
-        Learn more about who I am and let's start a conversation.
+        A more personal peek into my background, values, and how to connect with me.
       </p>
     </a>
   </section>
