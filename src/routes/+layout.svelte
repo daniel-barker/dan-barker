@@ -13,21 +13,23 @@
 		{ href: '#experience', text: 'Experience' },
 		{ href: '#skills', text: 'Skills' },
 		{ href: '#projects', text: 'Projects' },
-		{ href: '#contact', text: 'Contact' }
+		{ href: '/contact', text: 'Contact' }
 	];
 </script>
 
 <div class="min-h-screen bg-slate-50 dark:bg-slate-900">
-	<header class="fixed top-0 w-full bg-white/80 backdrop-blur-sm dark:bg-slate-800/80 shadow-sm z-50">
+	<header
+		class="fixed top-0 z-50 w-full bg-white/80 shadow-sm backdrop-blur-sm dark:bg-slate-800/80"
+	>
 		<nav class="container mx-auto px-4 py-4">
 			<div class="flex items-center justify-between">
 				<a href="/" class="text-xl font-bold text-slate-800 dark:text-white">Daniel Barker</a>
-				<ul class="hidden md:flex space-x-8">
+				<ul class="hidden space-x-8 md:flex">
 					{#each navItems as item}
 						<li>
 							<a
 								href={item.href}
-								class="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors"
+								class="text-slate-600 transition-colors hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
 							>
 								{item.text}
 							</a>
@@ -35,15 +37,10 @@
 					{/each}
 				</ul>
 				<button
-					class="md:hidden p-2 text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
+					class="p-2 text-slate-600 hover:text-slate-900 md:hidden dark:text-slate-300 dark:hover:text-white"
 					aria-label="Menu"
 				>
-					<svg
-						class="w-6 h-6"
-						fill="none"
-						stroke="currentColor"
-						viewBox="0 0 24 24"
-					>
+					<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path
 							stroke-linecap="round"
 							stroke-linejoin="round"
@@ -60,16 +57,18 @@
 		{@render children()}
 	</main>
 
-	<footer class="bg-slate-800 text-white py-8">
+	<footer class="bg-slate-800 py-8 text-white">
 		<div class="container mx-auto px-4">
-			<div class="flex flex-col md:flex-row justify-between items-center">
-				<div class="text-center md:text-left mb-4 md:mb-0">
-					<p class="text-sm">&copy; {new Date().getFullYear()} Daniel Barker. All rights reserved.</p>
+			<div class="flex flex-col items-center justify-between md:flex-row">
+				<div class="mb-4 text-center md:mb-0 md:text-left">
+					<p class="text-sm">
+						&copy; {new Date().getFullYear()} Daniel Barker. All rights reserved.
+					</p>
 				</div>
 				<div class="flex space-x-6">
 					<a
 						href="https://github.com/daniel-barker"
-						class="text-slate-300 hover:text-white transition-colors"
+						class="text-slate-300 transition-colors hover:text-white"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
