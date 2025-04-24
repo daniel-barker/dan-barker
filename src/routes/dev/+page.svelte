@@ -69,7 +69,7 @@
 					View My Work
 				</a>
 				<a
-					href="#contact"
+					href="/contact"
 					class="rounded-lg border-2 border-slate-800 px-8 py-3 font-semibold text-slate-800 transition-colors hover:bg-slate-800 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-slate-900"
 				>
 					Get in Touch
@@ -356,7 +356,7 @@
 				Have a project in mind? I'd love to help bring your ideas to life.
 			</p>
 			<a
-				href="mailto:dan@dan-barker.com"
+				href="/contact"
 				class="inline-flex items-center gap-2 bg-[#FF6B6B] hover:bg-[#FF5555] text-white font-semibold px-8 py-4 rounded-lg transition-colors"
 			>
 				<svg

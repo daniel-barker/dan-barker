@@ -1,56 +1,137 @@
 <script>
-  import { fade } from 'svelte/transition';
+	import { onMount } from 'svelte';
+
+	let formData = {
+		name: '',
+		email: '',
+		message: ''
+	};
+
+	let status = {
+		submitting: false,
+		success: false,
+		error: false,
+		message: ''
+	};
+
+	// Google Apps Script deployment ID - you'll need to replace this with your actual deployment ID
+	// after setting up your Google Apps Script
+	const SCRIPT_URL =
+		'https://script.google.com/macros/s/AKfycbyNy63vNFOQfXmPHgqtneinIwpvCcpqUjMunBXudpwSvxjHVattJQjCntG3QkAjkUUCsA/exec';
+
+	async function handleSubmit() {
+		status.submitting = true;
+		status.success = false;
+		status.error = false;
+		status.message = '';
+
+		try {
+			const response = await fetch(SCRIPT_URL, {
+				method: 'POST',
+				mode: 'no-cors', // This is important for CORS issues with Google Apps Script
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(formData)
+			});
+
+			// Since mode is 'no-cors', we can't actually read the response
+			// So we assume success if no error is thrown
+			status.success = true;
+			status.message = 'Your message has been sent! I will get back to you soon.';
+
+			// Reset form
+			formData = {
+				name: '',
+				email: '',
+				message: ''
+			};
+		} catch (error) {
+			status.error = true;
+			status.message = 'There was an error sending your message. Please try again.';
+			console.error('Form submission error:', error);
+		} finally {
+			status.submitting = false;
+		}
+	}
 </script>
 
-<main class="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
-  <!-- Hero Section -->
-  <section class="container mx-auto px-4 py-20 flex flex-col items-center text-center" in:fade>
-    <h1 class="text-5xl md:text-6xl font-bold text-slate-800 dark:text-white mb-6">
-      Hey, I'm Dan 👋
-    </h1>
-    <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-2xl mb-12">
-      I'm a versatile individual who loves creating, fixing, and helping. Whether it's crafting code, maintaining vehicles, or taking care of pets - I take pride in doing things well and learning something new along the way.
-    </p>
-    <div class="flex gap-4">
-      <a href="#services" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
-        Explore Services
-      </a>
-      <a href="#contact" class="px-6 py-3 bg-slate-200 hover:bg-slate-300 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-800 dark:text-white rounded-lg transition-colors">
-        Get in Touch
-      </a>
-    </div>
-  </section>
+<svelte:head>
+	<title>Contact | Daniel Barker</title>
+	<meta name="description" content="Get in touch with Daniel Barker, freelance web developer." />
+</svelte:head>
 
-  <!-- Main Sections Navigation -->
-  <section class="container mx-auto px-4 py-16 grid md:grid-cols-3 gap-8">
-    <!-- Services Card -->
-    <a href="/services" class="group p-6 bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all">
-      <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-        How I Help
-      </h2>
-      <p class="text-slate-600 dark:text-slate-300">
-        A mix of practical skills, creative projects, and everyday things I enjoy doing for others.
-      </p>
-    </a>
+<section class="container mx-auto px-4 py-16">
+	<div class="mx-auto max-w-3xl">
+		<h1 class="mb-6 text-4xl font-bold text-slate-800 dark:text-white">Contact Me</h1>
+		<p class="mb-8 text-lg text-slate-600 dark:text-slate-300">
+			Have a question or want to work together? Fill out the form below and I'll get back to you as
+			soon as possible.
+		</p>
 
-    <!-- Projects Card -->
-    <a href="/projects" class="group p-6 bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all">
-      <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-        My Path in Tech
-      </h2>
-      <p class="text-slate-600 dark:text-slate-300">
-        A look at how I got into development, what I’ve built, and where I'm going with it.
-      </p>
-    </a>
+		<form
+			on:submit|preventDefault={handleSubmit}
+			class="rounded-lg bg-white p-6 shadow-md dark:bg-slate-800"
+		>
+			<div class="mb-4">
+				<label for="name" class="mb-1 block text-sm font-medium text-slate-700 dark:text-slate-300"
+					>Name</label
+				>
+				<input
+					type="text"
+					id="name"
+					bind:value={formData.name}
+					required
+					class="w-full rounded-md border border-slate-300 px-4 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-700 dark:text-white"
+				/>
+			</div>
 
-    <!-- About/Contact Card -->
-    <a href="/me" class="group p-6 bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all">
-      <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-        Meet Me
-      </h2>
-      <p class="text-slate-600 dark:text-slate-300">
-        A more personal peek into my background, values, and how to connect with me.
-      </p>
-    </a>
-  </section>
-</main>
+			<div class="mb-4">
+				<label for="email" class="mb-1 block text-sm font-medium text-slate-700 dark:text-slate-300"
+					>Email</label
+				>
+				<input
+					type="email"
+					id="email"
+					bind:value={formData.email}
+					required
+					class="w-full rounded-md border border-slate-300 px-4 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-700 dark:text-white"
+				/>
+			</div>
+
+			<div class="mb-6">
+				<label
+					for="message"
+					class="mb-1 block text-sm font-medium text-slate-700 dark:text-slate-300">Message</label
+				>
+				<textarea
+					id="message"
+					bind:value={formData.message}
+					required
+					rows="5"
+					class="w-full rounded-md border border-slate-300 px-4 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-700 dark:text-white"
+				></textarea>
+			</div>
+
+			{#if status.success}
+				<div
+					class="mb-6 rounded-md bg-green-100 p-3 text-green-800 dark:bg-green-900 dark:text-green-100"
+				>
+					{status.message}
+				</div>
+			{:else if status.error}
+				<div class="mb-6 rounded-md bg-red-100 p-3 text-red-800 dark:bg-red-900 dark:text-red-100">
+					{status.message}
+				</div>
+			{/if}
+
+			<button
+				type="submit"
+				disabled={status.submitting}
+				class="w-full rounded-md bg-blue-600 px-4 py-2 font-medium text-white transition-colors hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+			>
+				{status.submitting ? 'Sending...' : 'Send Message'}
+			</button>
+		</form>
+	</div>
+</section>

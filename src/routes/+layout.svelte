@@ -9,10 +9,10 @@
 	let { children } = $props();
 
 	const navItems = [
-		{ href: '#about', text: 'About' },
-		{ href: '#experience', text: 'Experience' },
-		{ href: '#skills', text: 'Skills' },
-		{ href: '#projects', text: 'Projects' },
+		{ href: '/about', text: 'About' },
+		{ href: '/dev#projects', text: 'Experience' },
+		{ href: '/life', text: 'Skills' },
+		{ href: '/dev', text: 'Projects' },
 		{ href: '/contact', text: 'Contact' }
 	];
 </script>
@@ -24,7 +24,7 @@
 		<nav class="container mx-auto px-4 py-4">
 			<div class="flex items-center justify-between">
 				<a href="/" class="text-xl font-bold text-slate-800 dark:text-white">Daniel Barker</a>
-				<ul class="hidden space-x-8 md:flex">
+				<!-- <ul class="hidden space-x-8 md:flex">
 					{#each navItems as item}
 						<li>
 							<a
@@ -35,7 +35,7 @@
 							</a>
 						</li>
 					{/each}
-				</ul>
+				</ul> -->
 				<button
 					class="p-2 text-slate-600 hover:text-slate-900 md:hidden dark:text-slate-300 dark:hover:text-white"
 					aria-label="Menu"
