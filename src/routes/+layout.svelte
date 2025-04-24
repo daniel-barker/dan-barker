@@ -23,7 +23,7 @@
 	>
 		<nav class="container mx-auto px-4 py-4">
 			<div class="flex items-center justify-between">
-				<a href="/" class="text-xl font-bold text-slate-800 dark:text-white">Daniel Barker</a>
+				<a href="/" class="text-xl font-bold text-slate-800 dark:text-white">Dan Barker</a>
 				<!-- <ul class="hidden space-x-8 md:flex">
 					{#each navItems as item}
 						<li>

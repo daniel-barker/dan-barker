@@ -57,11 +57,22 @@
 </script>
 
 <svelte:head>
-	<title>Contact | Daniel Barker</title>
-	<meta name="description" content="Get in touch with Daniel Barker, freelance web developer." />
+	<title>Daniel Barker | Freelance Web Developer</title>
+	<meta name="description" content="Daniel Barker - Freelance Web Developer specializing in modern web technologies." />
 </svelte:head>
 
 <section class="container mx-auto px-4 py-16">
+	<div class="mx-auto max-w-3xl text-center mb-12">
+		<div class="flex justify-center mb-6">
+			<img
+				src="/images/dan-barker.webp"
+				alt="Dan Barker"
+				class="rounded-full w-48 h-48 object-cover border-4 border-blue-500 shadow-lg"
+			/>
+		</div>
+		<h1 class="text-4xl font-bold text-slate-800 dark:text-white mb-4">Dan Barker</h1>
+		<p class="text-xl text-slate-600 dark:text-slate-300 mb-8">Freelance Web Developer</p>
+	</div>
 	<div class="mx-auto max-w-3xl">
 		<h1 class="mb-6 text-4xl font-bold text-slate-800 dark:text-white">Contact Me</h1>
 		<p class="mb-8 text-lg text-slate-600 dark:text-slate-300">
@@ -133,5 +144,5 @@
 				{status.submitting ? 'Sending...' : 'Send Message'}
 			</button>
 		</form>
-	</div>
+		</div>
 </section>
